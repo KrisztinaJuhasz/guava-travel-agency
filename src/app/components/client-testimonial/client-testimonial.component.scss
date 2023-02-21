@@ -69,7 +69,7 @@ section {
 
 .testimonial-profile-picture {
     width: 40vw;
-    max-width: 200px;
+    max-width: 13rem;
     background-size: cover;
     border-radius: 9999px;
     position: relative;
@@ -129,6 +129,7 @@ section {
 
     .testimonial-profile-picture {
         width: 300px;
+        max-width: 10rem;
     }
 
     .testimonial-content-container {

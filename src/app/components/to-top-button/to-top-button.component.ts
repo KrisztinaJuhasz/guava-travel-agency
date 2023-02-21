@@ -15,8 +15,8 @@ export class ToTopButtonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    fromEvent<WheelEvent>(document, 'scroll').subscribe((event: WheelEvent): void => {
-      this.scrollPos = (<any>event).path[1].scrollY;
+    fromEvent<WheelEvent>(document, 'scroll').subscribe((): void => {
+      this.scrollPos = document.documentElement.scrollTop;
     });
   }
 
