@@ -1,0 +1,56 @@
+@use '../../globals' as g;
+
+a {
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px;
+    border: none;
+    background-color: g.$bright-blue;
+    transition: background-color 0.5s ease-in-out;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    svg {
+        transform: rotateZ(-90deg);
+    }
+    
+    path {
+        stroke: g.$dark-blue;
+        transition: stroke 0.5s ease-in-out;
+    }
+    
+    &:hover {
+        background-color: g.$dark-blue;
+        
+        path {
+            stroke: g.$orange;
+        }
+    }
+
+    &.visible {
+        opacity: 1;
+    }
+
+    &.hidden {
+        opacity: 0;
+    }
+
+    transition: opacity 0.5s linear;
+}
+
+@media only screen and (max-width: 1000px) {
+    a {
+        padding: 5px;
+
+        svg {
+            width: 50%;
+            height: 50%;
+        }
+    }
+}

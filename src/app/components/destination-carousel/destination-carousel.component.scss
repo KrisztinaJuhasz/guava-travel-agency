@@ -1,0 +1,79 @@
+@use '../../globals' as g;
+
+:host {
+    width: 100%;
+    background-color: g.$dark-blue;
+    padding: 100px 0px;
+}
+
+.carousel-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 40%;
+    margin: 0px auto;
+}
+
+button {
+    background-color: g.$orange;
+    opacity: 1;
+    top: 45%;
+    border-radius: 9999px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+
+    span {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            path {
+                stroke: rgba(#000000, 0.5);
+            }
+        }
+    }
+
+    &.carousel-control-prev {
+        left: 3.5%;
+    }
+
+    &.carousel-control-next {
+        right: 6.5%;
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-image: none;
+}
+
+.carousel-control-prev-icon {
+    svg {
+        transform: rotateY(180deg);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    :host {
+        padding: 50px 0px;
+    }
+
+    .carousel-button-container {
+        svg {
+            width: 50%;
+            height: 50%;
+        }
+
+        button {
+            padding: 5px 5px;
+
+            &.carousel-control-next {
+                right: 3.5%;
+            }
+        }
+    }
+}

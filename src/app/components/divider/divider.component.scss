@@ -1,0 +1,11 @@
+.divider {
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, #00B5B5 0%, #20364F 32.6%, #E82717 68.54%, #00B5B5 100%);
+}
+
+@media only screen and (max-width: 1000px) {
+    .divider {
+        height: 50px;
+    }
+}

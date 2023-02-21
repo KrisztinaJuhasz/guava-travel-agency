@@ -1,0 +1,17 @@
+<div class="counter-container">
+    <div class="counter-item-container">
+        <fa-icon [icon]="faPlane"></fa-icon>
+        <h2 #counterFlights class="counter" [countUp]="flightsValue" [options]="countUpOptions">0</h2>
+        <h3>Flights booked</h3>
+    </div>
+    <div class="counter-item-container">
+        <fa-icon [icon]="faUserFriends"></fa-icon>
+        <h2 #counterClients class="counter" [countUp]="clientsValue" [options]="countUpOptions">0</h2>
+        <h3>Satisfied clients</h3>
+    </div>
+    <div class="counter-item-container">
+        <fa-icon [icon]="faCalendarCheck"></fa-icon>
+        <h2 #counterEvents class="counter" [countUp]="eventsValue" [options]="countUpOptions">0</h2>
+        <h3>Events organized</h3>
+    </div>
+</div>

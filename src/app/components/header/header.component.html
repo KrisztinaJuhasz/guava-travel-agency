@@ -1,0 +1,97 @@
+<header>
+    <div class="menu-container">
+        <nav class="full-nav">
+            <a #anchorTag href="#home">Home</a>
+            <a #anchorTag href="#destinations">Destinations</a>
+            <a #anchorTag href="#travel">Travel</a>
+            <a #anchorTag href="#contact">Contact</a>
+        </nav>
+    </div>
+    <div class="menu-container">
+        <nav class="hamburger-nav">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                aria-controls="offcanvasTop">
+                <fa-icon [icon]="faBars"></fa-icon>
+            </button>
+            <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <a #anchorTag href="#home">Home</a>
+                    <a #anchorTag href="#destinations">Destinations</a>
+                    <a #anchorTag href="#travel">Travel</a>
+                    <a #anchorTag href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="header-content-container">
+        <div class="logo-container">
+            <svg width="200px" height="200px" viewBox="0 0 355 352" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+                style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:3;">
+                <g transform="matrix(1,0,0,1,-2749.35,-2139.27)">
+                    <g>
+                        <g>
+                            <g transform="matrix(0.871687,0,0,0.871687,813.44,293.82)">
+                                <path
+                                    d="M2395.82,2500.78C2307.59,2486.99 2240,2410.57 2240,2318.5C2240,2226.43 2307.59,2150.01 2395.82,2136.22"
+                                    style="fill:none;stroke:rgb(32,54,79);stroke-width:38.24px;" />
+                            </g>
+                            <g transform="matrix(-0.871687,1.06751e-16,-1.06751e-16,-0.871687,5040.25,4335.83)">
+                                <path
+                                    d="M2395.82,2500.78C2307.59,2486.99 2240,2410.57 2240,2318.5C2240,2226.43 2307.59,2150.01 2395.82,2136.22"
+                                    style="fill:none;stroke:rgb(32,54,79);stroke-width:38.24px;" />
+                            </g>
+                        </g>
+                        <g transform="matrix(1,0,0,1,1.78623,-8.60212)">
+                            <g transform="matrix(0.528269,0,0,0.528269,1636.69,1098.71)">
+                                <path
+                                    d="M2261.13,2404.26C2247.64,2378.63 2240,2349.45 2240,2318.5C2240,2247.73 2279.93,2186.21 2338.48,2155.27"
+                                    style="fill:none;stroke:rgb(232,39,23);stroke-width:55.21px;" />
+                            </g>
+                            <g transform="matrix(-0.528269,6.46943e-17,-6.46943e-17,-0.528269,4213.43,3548.15)">
+                                <path
+                                    d="M2261.13,2404.26C2247.64,2378.63 2240,2349.45 2240,2318.5C2240,2247.73 2279.93,2186.21 2338.48,2155.27"
+                                    style="fill:none;stroke:rgb(0,181,181);stroke-width:55.21px;" />
+                            </g>
+                            <g transform="matrix(0.23457,0,0,0.23457,2340.34,1780.18)">
+                                <path
+                                    d="M2395.82,2500.78C2307.59,2486.99 2240,2410.57 2240,2318.5C2240,2283.52 2249.75,2250.8 2266.69,2222.92"
+                                    style="fill:none;stroke:rgb(0,181,181);stroke-width:106.58px;" />
+                            </g>
+                            <g transform="matrix(-0.23457,2.87266e-17,-2.87266e-17,-0.23457,3509.78,2866.68)">
+                                <path
+                                    d="M2395.82,2500.78C2307.59,2486.99 2240,2410.57 2240,2318.5C2240,2283.52 2249.75,2250.8 2266.69,2222.92"
+                                    style="fill:none;stroke:rgb(232,39,23);stroke-width:106.58px;" />
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="text-brush-container">
+            <div class="text-container">
+                <h1 class="text-orange">Guava</h1>
+                <h1 class="text-dark-blue">Travel</h1>
+                <h1 class="text-bright-blue">Agency</h1>
+            </div>
+            <div class="brush-line"></div>
+        </div>
+    </div>
+    <div class="scroll-container">
+        <svg width="27" height="54" viewBox="0 0 27 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g>
+                <rect x="2" y="2" width="23" height="50" rx="11.5" stroke-width="4" />
+                <rect x="8.59091" y="7.97726" width="10.4318" height="21.4773" rx="5.21591" #scrollElement />
+            </g>
+        </svg>
+    </div>
+    <div class="video-container">
+        <video autoplay muted loop #video>
+            <source src="assets/GuavaTravelAgency.mp4">
+        </video>
+    </div>
+</header>

@@ -1,0 +1,34 @@
+<h1>Get in touch with us</h1>
+<form method="dialog">
+    <input type="text" placeholder="Name">
+    <input type="text" placeholder="Email">
+    <input type="tel" placeholder="Phone">
+    <select name="destination" id="form-destination-select">
+        <option selected disabled>Destination</option>
+        <option value="mexico">Mexico</option>
+        <option value="argentina">Argentina</option>
+        <option value="brazil">Brazil</option>
+        <option value="peru">Peru</option>
+        <option value="columbia">Columbia</option>
+    </select>
+    <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Additional message"></textarea>
+    <button type="submit" data-bs-toggle="modal" data-bs-target="#contactModal">Send</button>
+</form>
+
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel">Messaging unavailable</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Please note that since Guava Travel Agency is a fictional company, messages unfortunately cannot be sent.</p>
+        </div>
+        <div class="modal-footer">
+          <button #goToSiteBtn type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onSiteButtonClick()">Visit our Website</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Understand and Close</button>
+        </div>
+      </div>
+    </div>
+</div>

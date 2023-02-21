@@ -1,0 +1,41 @@
+:host {
+    width: 100%;
+    background: linear-gradient(180deg, #00B5B5 -150%, #20364F 100%);
+}
+
+footer {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #DDDDDD;
+
+    p {
+        margin-top: 50px;
+
+        &:first-of-type {
+            margin-bottom: 10px;
+        }
+    }
+
+    small {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    footer {
+        width: 80%;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.2rem;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}

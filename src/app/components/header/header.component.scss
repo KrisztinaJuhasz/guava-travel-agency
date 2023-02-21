@@ -1,0 +1,231 @@
+@use '../../globals' as g;
+
+$gradient: linear-gradient(90deg, rgba(0, 181, 181, 0.75) 0%, rgba(32, 54, 79, 0.75) 32.6%, rgba(232, 39, 23, 0.75) 68.54%, rgba(0, 181, 181, 0.75) 100%);
+
+:host {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-container {
+    width: 100%;
+    background: $gradient;
+
+    &.full-nav {
+        mix-blend-mode: multiply;
+    }
+
+    &.hamburger-nav {
+        mix-blend-mode: normal;
+    }
+
+    nav {
+        margin: auto;
+
+        a {
+            font-size: 24px;
+            color: g.$dark-blue;
+            transition: color ease-in-out 0.3s;
+
+            &:hover {
+                color: g.$orange;
+            }
+        }
+    }
+
+    .full-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 0px;
+        width: 50%;
+        min-width: 500px;
+
+        a {
+            color: rgb(255, 255, 255);
+            transition: color ease-in-out 0.3s;
+            mix-blend-mode: difference;
+
+            &:hover {
+                color: g.$bright-blue;
+            }
+        }
+    }
+
+    .hamburger-nav {
+        display: none;
+        padding: 10px 0px;
+        width: 90%;
+
+        #offcanvasTop {
+            background: linear-gradient(180deg, g.$bright-blue -100%, g.$dark-blue 75%, rgba(black, 0) 100%);
+            mix-blend-mode: normal;
+            height: 100vh;
+        }
+
+        button {
+            &:focus {
+                box-shadow: 0 0 0.25rem rgba(g.$orange, 25%);    
+            }
+
+            fa-icon {
+                color: g.$dark-blue;
+                font-size: 1.6rem;
+            }
+        }
+
+        .offcanvas-header {
+            justify-content: flex-end;
+        }
+
+        .offcanvas-body {
+            overflow-y: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                color: g.$bright-blue;
+                transition: color ease-in-out 0.3s;
+
+                &:hover {
+                    color: g.$orange;
+                }
+            }
+        }
+    }
+}
+
+.header-content-container {
+    width: 100%;
+    height: 100%;
+    padding: 5vh 0vh;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        path {
+            -webkit-filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
+            filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
+        }
+    }
+}
+
+.text-brush-container {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: -1;
+    -webkit-filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
+        filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
+
+    h1 {
+        display: inline;
+        font-size: 48px;
+    }
+
+    .brush-line {
+        width: 100%;
+        height: 50%;
+        background-image: url(/assets/brushline.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 5px;
+        z-index: -1;
+    }
+}
+
+.scroll-container {
+    width: 100%;
+    min-height: 100px;
+    background: linear-gradient(0deg, rgba(g.$bright-blue, 0.5) 0%, rgba(g.$dark-blue, 0) 100%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+
+    svg {
+        g {
+            rect:first-of-type {
+                stroke: rgba(g.$bright-blue, 0.75);
+            }
+
+            rect:last-of-type {
+                fill: rgba(g.$bright-blue, 0.75);
+            }
+        }
+    }
+}
+
+.video-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -2;
+    
+    video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: center;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .full-nav {
+        display: none !important;
+    }
+
+    .hamburger-nav {
+        display: flex !important;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .text-brush-container {
+        .text-container {
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .brush-line {
+            bottom: 17px;
+            width: 90%;
+            height: 30%;
+            background-size: 100%;
+        }
+    }
+}

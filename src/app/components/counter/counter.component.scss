@@ -1,0 +1,48 @@
+@use '../../globals' as g;
+
+:host {
+    width: 100%;
+}
+
+.counter-container {
+    width: 60%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.counter-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: g.$orange;
+    font-weight: bolder;
+}
+
+h3 {
+    color: g.$dark-blue;
+    font-size: 1.2rem;
+}
+
+fa-icon {
+    font-size: 5rem;
+    color: g.$dark-blue;
+}
+
+@media only screen and (max-width: 900px) {
+    .counter-container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .counter-item-container {
+        margin: 10px auto;
+    }
+}

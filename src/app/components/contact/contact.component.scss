@@ -1,0 +1,92 @@
+@use '../../globals' as g;
+
+:host {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+h1 {
+    background: linear-gradient(180deg, #00B5B5 0%, #20364F 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    * {
+        color: #444444;
+    }
+
+    input, select, textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 100%;
+        border: 2px solid #888888;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        padding: 10px 30px;
+        border-radius: 5px;
+        border: none;
+        background-color: g.$bright-blue;
+        color: #FFFFFF;
+        -webkit-box-shadow: inset 0px -40px 40px -30px g.$dark-blue; 
+        box-shadow: inset 0px -40px 40px -30px g.$dark-blue;
+        transition: box-shadow 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out, background-color 0.5s ease-in-out;
+
+        &:hover {
+            background-color: g.$dark-blue;
+            -webkit-box-shadow: inset 0px -40px 40px -30px g.$bright-blue; 
+            box-shadow: inset 0px -40px 40px -30px g.$bright-blue;
+        }
+    }
+}
+
+.modal {
+    button {
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.btn-primary {
+            background-color: g.$bright-blue;
+            transition: background-color 0.5s ease-in-out;
+
+            &:focus, &:hover {
+                background-color: g.$dark-blue;
+            }
+        }
+
+        &.btn-secondary {
+            transition: background-color 0.5s ease-in-out;
+
+            &:focus, &:hover {
+                background-color: g.$orange;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    form {
+        width: 70%;
+    }
+}

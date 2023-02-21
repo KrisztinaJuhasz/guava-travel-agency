@@ -1,0 +1,37 @@
+<div id="destination-testimonial-carousel" class="carousel slide" data-bs-ride="carousel" data-interval="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <app-destination [countryName]="'Mexico'" [countryDescription]="destinations.mexico" [countryImage]="'/assets/mexico.png'"></app-destination>
+        </div>
+        <div class="carousel-item">
+            <app-destination [countryName]="'Argentina'" [countryDescription]="destinations.argentina" [countryImage]="'/assets/argentina.png'"></app-destination>
+        </div>
+        <div class="carousel-item">
+            <app-destination [countryName]="'Brazil'" [countryDescription]="destinations.brazil" [countryImage]="'/assets/brazil.png'"></app-destination>
+        </div>
+        <div class="carousel-item">
+            <app-destination [countryName]="'Peru'" [countryDescription]="destinations.peru" [countryImage]="'/assets/peru.png'"></app-destination>
+        </div>
+        <div class="carousel-item">
+            <app-destination [countryName]="'Columbia'" [countryDescription]="destinations.columbia" [countryImage]="'/assets/columbia.png'"></app-destination>
+        </div>
+    </div>
+    <div class="carousel-button-container">
+        <button class="carousel-control-prev" type="button" data-bs-target="#destination-testimonial-carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+                <svg width="75%" height="75%" viewBox="0 0 47 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.35535 74.7107L39.7107 39.3554L4.35534 4.00002" stroke-width="10"/>
+                </svg>
+            </span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#destination-testimonial-carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+                <svg width="75%" height="75%" viewBox="0 0 47 79" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.35535 74.7107L39.7107 39.3554L4.35534 4.00002" stroke-width="10"/>
+                </svg>
+            </span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
