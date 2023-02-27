@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CountUpModule } from 'ngx-countup';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -35,7 +36,8 @@ import { CounterComponent } from './components/counter/counter.component';
     BrowserModule,
     CountUpModule,
     FontAwesomeModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

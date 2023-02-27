@@ -1,17 +1,17 @@
 <h1>Get in touch with us</h1>
-<form method="dialog">
-    <input type="text" placeholder="Name">
-    <input type="text" placeholder="Email">
-    <input type="tel" placeholder="Phone">
-    <select name="destination" id="form-destination-select">
-        <option selected disabled>Destination</option>
+<form [formGroup]="contactForm" method="dialog">
+    <input [class.error]="name!.invalid && name!.touched" type="text" placeholder="Name (required)" formControlName="name">
+    <input [class.error]="email!.invalid && email!.touched" type="text" placeholder="Email (required)" formControlName="email">
+    <input type="tel" placeholder="Phone" formControlName="phone">
+    <select name="destination" id="form-destination-select" formControlName="destination">
+        <option selected disabled hidden>Destination</option>
         <option value="mexico">Mexico</option>
         <option value="argentina">Argentina</option>
         <option value="brazil">Brazil</option>
         <option value="peru">Peru</option>
         <option value="columbia">Columbia</option>
     </select>
-    <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Additional message"></textarea>
+    <textarea name="contact-message" id="contact-message" cols="30" rows="10" placeholder="Additional message" formControlName="message"></textarea>
     <button type="submit" data-bs-toggle="modal" data-bs-target="#contactModal">Send</button>
 </form>
 
