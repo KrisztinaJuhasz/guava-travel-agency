@@ -3,8 +3,8 @@
     <div class="destination-content-container">
         <h1>{{ countryName }}</h1>
         <div class="destination-text-container">
-            <p>{{ countryDescription }}</p>
-            <div class="text-fade"></div>
+            <p #destinationText>{{ countryDescription }}</p>
+            <div [class.remove]="!textFade" class="text-fade"></div>
         </div>
     </div>
 </section>
