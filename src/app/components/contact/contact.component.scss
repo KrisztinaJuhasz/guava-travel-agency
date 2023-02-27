@@ -85,6 +85,10 @@ form {
             &:focus, &:hover {
                 background-color: g.$orange;
             }
+
+            a {
+                color: rgb(255, 255, 255);
+            }
         }
     }
 }

@@ -38,8 +38,4 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSiteButtonClick(): void {
-    window.location.href = 'http://digitalvallis.com';
-  }
-
 }

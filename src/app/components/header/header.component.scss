@@ -56,9 +56,8 @@ header {
         min-width: 500px;
 
         a {
-            color: rgb(255, 255, 255);
+            color: rgb(220, 220, 220);
             transition: color ease-in-out 0.3s;
-            mix-blend-mode: difference;
 
             &:hover {
                 color: g.$bright-blue;
@@ -83,7 +82,7 @@ header {
             }
 
             fa-icon {
-                color: g.$dark-blue;
+                color: rgb(220, 220, 220);
                 font-size: 1.6rem;
             }
         }
@@ -112,51 +111,40 @@ header {
 }
 
 .header-content-container {
-    width: 100%;
+    width: 80%;
+    max-width: 30rem;
     height: 100%;
-    padding: 5vh 0vh;
-}
-
-.logo-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    svg {
-        path {
-            -webkit-filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
-            filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
-        }
-    }
-}
-
-.text-brush-container {
-    width: 100%;
-    height: 10vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    position: relative;
-    z-index: -1;
-    -webkit-filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
-        filter: drop-shadow(3px 3px 2px rgba(g.$dark-blue, 0.75));
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
 
-    h1 {
-        display: inline;
-        font-size: 48px;
+    .glass {
+        width: 100%;
+        padding: 3rem;
+        border: solid white 2px;
+        border-radius: 10px;
+        background: rgba(183, 183, 183, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
     }
 
-    .brush-line {
-        width: 100%;
-        height: 50%;
-        background-image: url(/assets/brushline.png);
-        background-position: center;
-        background-repeat: no-repeat;
-        position: absolute;
-        bottom: 5px;
-        z-index: -1;
+    button {
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: rgb(255, 255, 255) solid 2px;
+        background-color: rgba(0, 0, 0, 0);
+        margin-top: 1rem;
+        transition: all 0.3s ease-in-out;
+
+        a {
+            color: rgb(255, 255, 255);
+        }
+
+        &:hover {
+            background-color: rgba(220, 220, 220, 0.3);
+        }
     }
 }
 
@@ -212,20 +200,5 @@ header {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-    }
-
-    .text-brush-container {
-        .text-container {
-            h1 {
-                font-size: 2rem;
-            }
-        }
-
-        .brush-line {
-            bottom: 17px;
-            width: 90%;
-            height: 30%;
-            background-size: 100%;
-        }
     }
 }
