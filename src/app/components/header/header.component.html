@@ -1,13 +1,14 @@
 <header>
     <div class="menu-container">
+        <span class="logo-container">
+            <img src="/assets/logo_black.png" alt="Guava Travel Logo">
+        </span>
         <nav class="full-nav">
             <a #anchorTag href="#home">Home</a>
             <a #anchorTag href="#destinations">Destinations</a>
             <a #anchorTag href="#travel">Travel</a>
             <a #anchorTag href="#contact">Contact</a>
         </nav>
-    </div>
-    <div class="menu-container">
         <nav class="hamburger-nav">
             <button #openHamburgerMenu class="btn" type="button" data-bs-target="#offcanvasTop"
                 aria-controls="offcanvasTop">
@@ -29,8 +30,10 @@
     </div>
     <div class="header-content-container">
         <div class="glass">
-            <h1>Explore {{ animatedText }}</h1>
-            <p>Book a vacation with Guava Travel</p>
+            <div>
+                <h1>Explore {{ animatedText }}</h1>
+                <p>Book a vacation with Guava Travel</p>
+            </div>
             <button>
                 <a href="#contact">Get in touch</a>
             </button>
